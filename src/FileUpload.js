@@ -1,20 +1,22 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useContext } from 'react';
 import TargetBox from './TargetBox';
+import { ImageContext } from './context/imagecontext';
 
 
-const FileUpload = () => {
+const FileUpload = ({image,position}) => {
+    const imageContext = useContext(ImageContext);
+    const {dispatch} = imageContext;
 
-    const [droppedFiles, setDroppedFiles] = useState([]);
     const handleFileDrop = useCallback((item, monitor) => {
         if(monitor){
             const files = monitor.getItem().files;
-            setDroppedFiles(files);
+            dispatch({type: position, payload: files});
         }
-    }, []);
-    console.log(droppedFiles);
+    }, [dispatch,position]);
+
     return (
         <div>
-            <TargetBox onDrop={handleFileDrop} />
+            <TargetBox onDrop={handleFileDrop} image={image} />
         </div>
     );
 };
