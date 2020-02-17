@@ -21,6 +21,7 @@ const ImageProvider = ({values,children}) => {
     )
 };
 ```
+The ImageContext consumers for state are components `LeftImageUpload`, `MiddleImageUpload`, and `RightImageUpload`. Each component passes down the corresponding image to `FileUpload` component that is also the ImageContext consumer and gets the dispatch method from the ImageReducer.
 
 ## ImageReducer
 ```
@@ -38,6 +39,10 @@ const ImageProvider = ({values,children}) => {
 
 ```
 
+## Screenshots
+![Screenshot1](/src/images/Capture1.PNG)
+![Screenshot2](/src/images/Capture2.PNG)
+![Screenshot2](/src/images/Capture3.PNG)
 
 ## Available Scripts
 
