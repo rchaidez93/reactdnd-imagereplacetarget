@@ -39,11 +39,6 @@ The ImageContext consumers for state are components `LeftImageUpload`, `MiddleIm
 
 ```
 
-## Screenshots
-![Screenshot1](/src/images/Capture1.PNG)
-![Screenshot2](/src/images/Capture2.PNG)
-![Screenshot2](/src/images/Capture3.PNG)
-
 ## Available Scripts
 
 Once you clone this repo, you can:
